@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Classroom";
+}
+
+<div class="row" style="margin-top:15px;">
+    @Html.ActionLink("Add", "Edit", new { id =0 })
+</div>
+
+<div class="row" style="margin-top:10px;">
+    <div class="row-md-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Short Name</th>
+                    <th scope="col">Full Name</th>
+                    <th scope="col">Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.list)
+                {
+                <tr>
+                    <td>@item.ShortName</td>
+                    <td>@item.FullName</td>
+                    <td>  @Html.ActionLink("Edit", "Edit", new { id = item.Id })</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
