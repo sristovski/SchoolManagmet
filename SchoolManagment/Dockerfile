@@ -18,5 +18,5 @@ WORKDIR /app
 COPY --from=publish /app .
 ENTRYPOINT ["dotnet", "SchoolManagment.dll"]
 
-#  RUN chmod +x . /begin.sh
-# CMD /bin/bash . /begin.sh
+#RUN chmod +x begin.sh
+CMD sh begin.sh
